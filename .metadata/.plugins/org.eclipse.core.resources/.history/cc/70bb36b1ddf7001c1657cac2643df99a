@@ -1,0 +1,17 @@
+/*
+ *  Often use classes to model real-world concepts by assigning
+ *  state and behavior to the instances of the class
+ */
+
+public class Objects{
+	
+	public static void main(String[] args) {
+		
+		/*
+		 * An object is:
+		 * 1. An instance of a class
+		 * 2. A representation for some data that's stored in memory
+		 */
+		
+	} // main ()
+} // Objects

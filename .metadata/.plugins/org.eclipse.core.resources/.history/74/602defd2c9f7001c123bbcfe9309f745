@@ -1,0 +1,27 @@
+public class Looping {
+	public static void main(String[] args) {
+		
+		// for loop
+		for (int i = 0; i < 17; i++) {
+			System.out.println(i);
+		} // for ()
+		
+		// while loops
+		int wEx = 0;
+		boolean keepGoing = true;
+		/*
+		while(wEx < 10) {
+			System.out.println(wEx);
+			wEx++;
+		} // while()
+		*/
+		while(keepGoing) {
+			System.out.println("Hi!!");
+			wEx++;
+			
+			if(wEx == 10) {
+				break;
+			} // if ()
+		} // while ()
+	} // main()
+} // Looping ()
