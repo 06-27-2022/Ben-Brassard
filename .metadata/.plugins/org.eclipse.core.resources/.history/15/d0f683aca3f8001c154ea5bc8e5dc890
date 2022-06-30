@@ -43,11 +43,9 @@ public class RevatureEmployee {
 //		ben.age = 22;
 //		ben.department = "Training";
 		
-		ben.giveRaise(1000000);
 		ben.printEmployeeDetails();
 		
 		int benRemainingWorkYears = ben.calculateRemainingWorkYears();
-		
 		System.out.println("Ben can retire in " + benRemainingWorkYears + " years.");
 	} // main
 

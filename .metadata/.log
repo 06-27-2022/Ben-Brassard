@@ -2022,3 +2022,167 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2022-06-30 12:02:39.708 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/bj.brassard/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/bj.brassard/.eclipse_keyring
+
+!ENTRY org.eclipse.jface 2 0 2022-06-30 12:02:57.804
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-30 12:02:57.805
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d960561,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3aa63b53,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-06-30 12:02:57.805
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@39a9becc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@177302d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:05.746
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:05.746
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6897cb0b[org.springframework.tooling.boot.ls:1.36.0.202206171137(id=561)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:05.781
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:06.019
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.lsp4e 4 0 2022-06-30 12:03:35.897
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.LanguageServerWrapper.supportsWorkspaceFolderCapability(LanguageServerWrapper.java:562)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:551)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:889)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$6(LanguageServiceAccessor.java:361)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1707)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:362)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLanguageServers(LanguageServiceAccessor.java:601)
+	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$2.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:36.416
+!MESSAGE Boot LS startup time from start to initialized: 30588ms
+
+!ENTRY org.eclipse.urischeme 4 0 2022-06-30 12:03:41.187
+!MESSAGE /Volumes/Spring Tool Suite 4/SpringToolSuite4.app/Contents/Info.plist: Read-only file system
+!STACK 0
+java.nio.file.FileSystemException: /Volumes/Spring Tool Suite 4/SpringToolSuite4.app/Contents/Info.plist: Read-only file system
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:100)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:484)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3008)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:3056)
+	at org.eclipse.urischeme.internal.registration.FileProvider.newWriter(FileProvider.java:51)
+	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.changePlistFile(RegistrationMacOsX.java:149)
+	at org.eclipse.urischeme.internal.registration.RegistrationMacOsX.handleSchemes(RegistrationMacOsX.java:55)
+	at org.eclipse.urischeme.AutoRegisterSchemeHandlersJob.run(AutoRegisterSchemeHandlersJob.java:94)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:47.107
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EszXbOTnisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.409
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.953
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.955
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.956
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EszXbOTn => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.957
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.969
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.970
+!MESSAGE buffering callback sts4.classpath.EszXbOTn Training false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.971
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.972
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.973
+!MESSAGE buffering callback sts4.classpath.EszXbOTn TrainingAssignments false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:48.973
+!MESSAGE executing callback sts4.classpath.EszXbOTn 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-30 12:03:51.504
+!MESSAGE executing callback sts4.classpath.EszXbOTn FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2022-06-30 12:03:51.505
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-06-30 12:31:47.933
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

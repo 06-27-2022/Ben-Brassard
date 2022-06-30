@@ -18,8 +18,7 @@ public class RevatureEmployee {
 	
 	void printEmployeeDetails() {
 		System.out.print("Employee Name: " + this.name + ", Employee Age: "
-				+ this.age + ", Employee Dept: " + this.department +
-				", Salary: " + this.salary);
+				+ this.age + ", Employee Dept: " + this.department);
 		System.out.println("\n");
 		return; 
 	} // printEmployeeDetails()
@@ -29,25 +28,19 @@ public class RevatureEmployee {
 		int remainingYears = 55 - this.age;
 		
 		return remainingYears;
-	} // calculateRemainingWorkYears()
-	
-	void giveRaise(float raise) {
-		this.salary += raise;
-	} // giveRaise
+	}
 	
 	public static void main(String[] args) {
 		
-		RevatureEmployee ben = new RevatureEmployee("Ben", 22, "Training", 65f);
+		RevatureEmployee ben = new RevatureEmployee("Ben", 22, "Training", 65000);
 		
 //		ben.name = "Ben";
 //		ben.age = 22;
 //		ben.department = "Training";
 		
-		ben.giveRaise(1000000);
 		ben.printEmployeeDetails();
 		
 		int benRemainingWorkYears = ben.calculateRemainingWorkYears();
-		
 		System.out.println("Ben can retire in " + benRemainingWorkYears + " years.");
 	} // main
 
