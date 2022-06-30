@@ -1,0 +1,21 @@
+
+public class ArraySums {
+
+	static int findSumOfArray(int[] arr) {
+		int sum = 0;
+		
+		for (int i : arr) {
+			sum += i;
+		} // for()
+		
+		return sum;
+	} // findSumOfArray()
+	
+	
+	public static void main(String[] args) {
+		int[] arr1 = {3, 2, 3};
+		
+		System.out.println("The sum of arr1 is " + findSumOfArray(arr1));
+		
+	} // main
+} // ArraySums
