@@ -1,0 +1,13 @@
+public class mathexample {
+	
+	public static void main(String[] args) {
+		
+		int a = 200;
+		int b = 50;
+		
+		// Prints 250
+		System.out.println(Math.addExact(a, b)); 
+		Math.addExact(Integer.MAX_VALUE, 1); 
+		
+	} // main
+} // mathexample 

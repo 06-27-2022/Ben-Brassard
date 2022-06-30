@@ -27,6 +27,6 @@ public class Objects{
 		Object myObject = new Object();
 		
 		// You can only do this with objects
-		myObject.toString();
+		// myObject.toString();
 	} // main ()
 } // Objects
