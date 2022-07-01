@@ -1,0 +1,14 @@
+package com.revature;
+
+// import java.util
+
+public class InputExample {
+
+	public static void main(String[] args) {
+		
+		System.out.println("output");
+		
+		// Scanner scan = new Scanner();
+		
+	} //  main()
+} // InputExample

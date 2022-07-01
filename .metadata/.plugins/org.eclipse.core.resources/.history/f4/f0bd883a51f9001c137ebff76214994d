@@ -1,0 +1,12 @@
+package com.revature;
+
+public class InputExample {
+
+	public static void main(String[] args) {
+		
+		System.out.println("output");
+		
+		System.
+		
+	} //  main()
+} // InputExample
