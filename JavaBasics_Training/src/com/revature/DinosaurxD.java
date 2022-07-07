@@ -1,5 +1,7 @@
 package com.revature;
 
+import java.util.Objects;
+
 /*
  * Java uses curly braces to denote a variabl's scope. A variable
  * is in scope for the entirety of the "block" inside of which it was declared.
@@ -97,8 +99,44 @@ public class DinosaurxD {
 	public String toString() {
 		
 		return "Name: " + this.name + ", Habitat: " + this.habitat + ", Height: " + this.height;
-	}
+	} // toString()
 	
+	
+	/*
+	 * The hashCode method is inherited from the Object class.
+	 * Java uses the hashCode method to easily put objects into 
+	 * "buckets" so that they are easier to locate (in memory).
+	 */
+	@Override
+	public int hashCode() {
+		return Objects.hash(habitat, height, name);
+	} // hashCode()
+
+	/*
+	 * The equals method is inherited from the Object class. It
+	 * is used to "compare" two instances of a class. Please note that
+	 * is a different type of comparison that the == operator provides.
+	 * 
+	 * For example:
+	 * 
+	 * String s1 = "a string";
+	 * String s2 = "another string";
+	 * 
+	 * s1 == s2
+	 * s1.equals(s2)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DinosaurxD other = (DinosaurxD) obj;
+		return Objects.equals(habitat, other.habitat) && height == other.height && Objects.equals(name, other.name);
+	}
+
 	public static void main(String[] args) {
 		
 		/*
@@ -111,6 +149,7 @@ public class DinosaurxD {
 		DinosaurxD trex = new DinosaurxD("T-Rex", "Land", 100);
 		DinosaurxD triceratops = new DinosaurxD("Triceratops", "Land", 40);
 		DinosaurxD pterodactyl = new DinosaurxD("Pterodactyl", "Land, but they fly", 30);
+		DinosaurxD spino = new DinosaurxD("T-Rex", "Land", 100);
 		
 		DinosaurxD[] dinosaurs = {trex, triceratops, pterodactyl};
 		
@@ -125,7 +164,50 @@ public class DinosaurxD {
 		
 		trex.eat();
 		trex.eat(10);
+		// toString() example
 		System.out.println(triceratops);
+		
+		System.out.println("---------------------------");
+		
+		// equals() example
+		int a = 78;
+		int b = 89;
+		
+		/*
+		 * We actually DO use the == operator to compare primitives,
+		 * but this is not acceptable for object types (depending on
+		 * what you're trying to do).
+		 */
+		if(a == b) {
+			System.out.println("Same num!");
+		} // if()
+		
+		String s1 = "a string";
+		String s2 = "a string";
+		
+		/*
+		 * This is only going to print "true" because of the
+		 * String pool. The == operator compares memory addresses when used with 
+		 * Object types - NOT contents. It is only true because
+		 * both Strings are actually just the exact same String objects
+		 * in memory.
+		 */
+		System.out.println(s1 == s2);
+		
+		String s3 = "a string";
+		String s4 = new String("a string");
+		
+		System.out.println(s3 == s4);
+		/*
+		 * It is very likely that your intention here is to actually compare the
+		 * contents of the strings. In that case, you need to use the
+		 * "equals" method.
+		 */
+		System.out.println(s3.equals(s4));
+		
+		// What id we want to compare Dinosaurs to each other?
+		
+		System.out.println(trex.equals(spino));
 	} // main()
 	
 	
