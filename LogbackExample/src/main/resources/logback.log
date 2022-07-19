@@ -1,0 +1,13 @@
+10:24:19:641 [main] INFO  loggingEx.LoggingBasics - This is an info log
+10:24:19:655 [main] WARN  loggingEx.LoggingBasics - This is a warn log
+10:24:19:656 [main] ERROR loggingEx.LoggingBasics - This is an error log
+10:25:41:951 [main] TRACE loggingEx.LoggingBasics - This is a trace log
+10:25:41:954 [main] DEBUG loggingEx.LoggingBasics - This is a debug log
+10:25:41:954 [main] INFO  loggingEx.LoggingBasics - This is an info log
+10:25:41:954 [main] WARN  loggingEx.LoggingBasics - This is a warn log
+10:25:41:954 [main] ERROR loggingEx.LoggingBasics - This is an error log
+10:33:32:177 [main] TRACE loggingEx.LoggingBasics - Logging message: This is a string 
+10:33:32:179 [main] INFO  loggingEx.LoggingBasics - Let's divide 42 by 0. 
+10:33:32:181 [main] TRACE loggingEx.LoggingBasics - Error dividing 42 by 0. 
+java.lang.ArithmeticException: / by zero
+	at loggingEx.LoggingBasics.main(LoggingBasics.java:42)
